@@ -4,7 +4,7 @@ import pandas as pd
 import json
 
 # Opening and Loading the JSON dataset
-with open("C:/Users/Upal Ghosh/Downloads/data.json", "r+") as f:
+with open("data.json", "r+") as f:
     data = json.load(f)
 
 # Incorporating the data into a python dataset
