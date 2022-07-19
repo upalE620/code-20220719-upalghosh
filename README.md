@@ -1,2 +1,2 @@
 # code-20220719-upalghosh
-Python BMI Calculator
+Given a JSON data, we are required to calculate the BMI and find accordingly the BMI Category and Health Risk factor.
