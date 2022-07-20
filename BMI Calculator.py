@@ -14,7 +14,7 @@ df = pd.json_normalize(data)
 df["HeightM"] = df["HeightCm"] / 100
 df["BMI"] = df.WeightKg / (df["HeightM"] ** 2)
 
-# create a list of our conditions
+# Creating a list of the conditions
 conditions = [
     (df.BMI < 18.5),
     (df.BMI >= 18.5) & (df.BMI < 25),
@@ -24,11 +24,11 @@ conditions = [
     (df.BMI >= 40)
     ]
 
-# create a list of the values we want to assign for each condition
+# Creating a list of the values that are needed to be assigned for each condition
 values1 = ['Underweight', 'Normal weight', 'Overweight', 'Moderately obese', 'Severely obese', 'Very severely obese']
 values2 = ['Malnutrition risk', 'Low risk', 'Enhanced risk', 'Medium risk', 'High risk', 'Very high risk']
 
-# create a new column and use np.select to assign values to it using our lists as arguments
+# Creating a new column and using np.select to assign values to it using the lists as arguments
 df['BMI Category'] = np.select(conditions, values1)
 df['Health Risk'] = np.select(conditions, values2)
 
